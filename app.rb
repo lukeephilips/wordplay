@@ -10,8 +10,8 @@ end
 get('/wordplay') do
   @sentence = params.fetch('sentence')
   @test_word = params.fetch('test_word')
-  @count = params.fetch('sentence').game_router(params.fetch('test_word'), params.fetch('game_select'))
+  @count = params.fetch('sentence').game_router(params.fetch('test_word'), params.fetch('replacement_word'), params.fetch('transformation_select'),params.fetch('match_select'))
 
-  @match_type = params.fetch('game_select')
+  @match_type = params.fetch('match_select')
   erb(:wordplay)
 end
