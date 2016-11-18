@@ -16,3 +16,7 @@ body {
 .sentence {
   font-style: italic;
 }
+.jumbotron {
+  @font-face {font-family:"Sesame Street";src:url("SESAME.eot?") format("eot"),url("SESAME.woff") format("woff"),url("SESAME.ttf") format("truetype"),url("SESAME.svg#Sesame-Street") format("svg");font-weight:normal;font-style:normal;}
+
+}
