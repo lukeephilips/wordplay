@@ -7,10 +7,10 @@
 
 ## Description
 
-_A few string manipulations - including counting the number of times a substring appears in a string but with partial matches and whole word matches 
+_A few string manipulations - including counting the number of times a substring appears in a string but with partial matches and whole word matches
 
 
-_[Link to site.]()_
+_[Link to site.](https://fathomless-hollows-10242.herokuapp.com)_
 
 ## Specifications
 
