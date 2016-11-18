@@ -1,22 +1,8 @@
 <form action="/wordplay">
 
   <div class="form-group">
-    <label for="sentence">Please enter the sentence you'd like to test: </label>
+    <label for="sentence">Please enter a sentence: </label>
     <input type="text" name="sentence" class="form-control">
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label for="test_word">Please enter a test string: </label>
-        <input type="text" name="test_word" class="form-control">
-      </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label for="replacement_word">Replace any occurances of your test string with (and select 'replace' below):</label>
-      <input type="text" name="replacement_word" class="form-control">
-    </div>
-  </div>
   </div>
   <div class="row">
     <div class="form-group" >
@@ -36,15 +22,27 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="form-group">
+    <div class="col-sm-6">
+      <label for="test_word">Find my string: </label>
+      <input type="text" name="test_word" class="form-control">
+    </div>
+    <div class="col-sm-6">
+      <label for="replacement_word">Replace my string with (select 'replace' above):</label>
+      <input type="text" name="replacement_word" class="form-control">
+    </div>
+  </div>
+</div>
 <div class="alert alert-success">
-  <p>Use the buttons to:</p>
+  <p>Use the dropdowns to:</p>
   <ul>
-    <li>Count how many times your string appears in your sentance, looking at either whole or partial words</li>
+    <li>Count how many times your string appears in your sentence, looking at either whole or partial words</li>
     <li>Replace every instance of your string with a different string, looking at either whole or partial words</li>
   </ul>
 </div>
   <button type="submit" class="btn btn-lg btn-success">Go</button>
 </form>
 <div class="well">
-  <img class="img-rounded" src="img/big-bird.jpg" alt="some friends" />
+  <img class="img-rounded center-block" src="img/big-bird.jpg" alt="some friends" />
 </div>
