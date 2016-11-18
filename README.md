@@ -7,20 +7,24 @@
 
 ## Description
 
-_A few string manipulations - including counting the number of times a substring appears in a string but with partial matches and whole word matches only_
+_A few string manipulations - including counting the number of times a substring appears in a string but with partial matches and whole word matches 
 
 
 _[Link to site.]()_
 
 ## Specifications
 
-* User will enter a string, system will remove all punctuation and non-word characters and convert to downcase
-
 Whole word match:
 * If user enters a string and a word, it will display the number of whole word matches
 
 Partial Word match:
 * If user enters a string and a word, it will display the number of times the word appears in the string, including partial words
+
+Whole word replace:
+* If user enters a string, word A and word B, it will replaces instances of A with B - only matching whole words
+
+Partial Word match:
+* If user enters a string, word A and word B, it will replaces instances of A with B - matching partial words
 
 
 ## Instructions:

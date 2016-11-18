@@ -1,15 +1,11 @@
 class String
-  define_method('game_router') do |test_word, replacement_word, transformation, match|
-    if match == "whole-word"
+  define_method('game_router') do |test_word, replacement_word, transformation, match_type|
+    if match_type == "whole-word"
       self.whole_word(test_word, replacement_word, transformation)
-    elsif match == "partial-word"
+    elsif match_type == "partial-word"
       self.partial_word(test_word, replacement_word, transformation)
     end
   end
-
-  # define_method('convert_input') do
-  #   self.downcase().gsub(/[^\w\s]/,'')
-  # end
 
   define_method('whole_word') do |test_word, replacement_word, transformation|
     input_array = self.downcase().gsub(/[^\w\s]/,'').split()

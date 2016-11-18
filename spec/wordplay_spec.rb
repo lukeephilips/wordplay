@@ -76,14 +76,9 @@ describe('String#game_router') do
         expect("Cat cathedral".game_router("cat","dog","count","partial-word",)).to(eq(2))
   end
 end
-  # convert input helper method to convert input to lowercasewith no non-word characters
-# describe('String#convert_input') do
-#   it('converts the user input to downcase with all non-word characters removed') do
-#     expect("I have many pets, including a cat and a dog. Cats are funny pets. There are few pets funnier than a cat. Dogs are cool too. Much cooler than cats.".convert_input()).to(eq("i have many pets including a cat and a dog cats are funny pets there are few pets funnier than a cat dogs are cool too much cooler than cats"))
-#   end
-# end
+
   # Whole word helper method
-describe('String#whole_word') do
+describe('String#whole_word_count') do
   it('displays the number of times a word appears in the user input string as a whole word') do
     expect("I have many pets, including a cat and a dog. Cats are funny pets. There are few pets funnier than a cat. Dogs are cool too. Much cooler than cats.".whole_word('cool',"","count",)).to(eq(1))
   end
@@ -94,7 +89,7 @@ describe('String#whole_word_replace') do
   end
 end
   # Partial word helper method
-describe('String#partial_word') do
+describe('String#partial_word_count') do
   it('displays the number of times a substring appears in the user input string') do
     expect("I have many pets, including a cat and a dog. Cats are funny pets. There are few pets funnier than a cat. Dogs are cool too. Much cooler than cats.".partial_word('cat',"","count",)).to(eq(4))
   end

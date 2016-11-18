@@ -1,3 +1,5 @@
+@font-face {font-family:"Sesame Street";src:url("SESAME.eot?") format("eot"),url("SESAME.woff") format("woff"),url("SESAME.ttf") format("truetype"),url("SESAME.svg#Sesame-Street") format("svg");font-style:normal;}
+
 body {
   font-family: arial;
 }
@@ -17,6 +19,13 @@ body {
   font-style: italic;
 }
 .jumbotron {
-  @font-face {font-family:"Sesame Street";src:url("SESAME.eot?") format("eot"),url("SESAME.woff") format("woff"),url("SESAME.ttf") format("truetype"),url("SESAME.svg#Sesame-Street") format("svg");font-weight:normal;font-style:normal;}
+font-family: "Sesame Street";
 
+
+text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.jumbotron h1 {
+  font-size: 8em;
 }
