@@ -25,7 +25,11 @@ class String
     if transformation == "count"
       self.downcase().gsub(/[^\w\s]/,'').scan(test_word.downcase().gsub(/[^\w\s]/,'')).length()
     elsif transformation == "replace"
-      self.downcase().gsub(/[^\w\s]/,'').gsub!(test_word.downcase().gsub(/[^\w\s]/,''), replacement_word.downcase().gsub(/[^\w\s]/,'').upcase!())
+      if replacement_word == ""
+        replacement_word = "Please enter a replacement word!"
+      else
+        self.downcase().gsub(/[^\w\s]/,'').gsub!(test_word.downcase().gsub(/[^\w\s]/,''), replacement_word.downcase().gsub(/[^\w\s]/,'').upcase!())
+      end
     end
   end
 end

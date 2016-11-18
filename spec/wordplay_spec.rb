@@ -33,12 +33,23 @@ describe('the PARTIAL word REPLACE path', {:type => :feature}) do
   it('processes user input and replaces partial word matches') do
     visit('/')
     fill_in('sentence', :with => 'I am a cat. I am only a cat and not a cathode ray or a cathedral.')
-    fill_in('test_word', :with => 'cat')
-    fill_in('replacement_word', :with => 'dog')
     select('Find partial-word matches', :from => 'match_select')
     select('Replace', :from => 'transformation_select')
+    fill_in('test_word', :with => 'cat')
+    fill_in('replacement_word', :with => 'dog')
     click_button('Go')
     expect(page).to have_content('i am a DOG i am only a DOG and not a DOGhode ray or a DOGhedral')
+  end
+end
+describe('the PARTIAL word REPLACE path', {:type => :feature}) do
+  it('processes user input and replaces partial word matches') do
+    visit('/')
+    fill_in('sentence', :with => 'I am a cat. I am only a cat and not a cathode ray or a cathedral.')
+    select('Find partial-word matches', :from => 'match_select')
+    select('Replace', :from => 'transformation_select')
+    fill_in('test_word', :with => 'cat')
+    click_button('Go')
+    expect(page).to have_content('Please enter a replacement word!')
   end
 end
 describe('the WHOLE word REPLACE path', {:type => :feature}) do
@@ -97,5 +108,10 @@ end
 describe('String#partial_word_replace') do
   it('replaces instances of subtring A with substring B') do
     expect("Cat cathedral".partial_word('cat',"dog","replace",)).to(eq("DOG DOGhedral"))
+  end
+end
+describe('String#partial_word_replace') do
+  it('replaces instances of subtring A with nothing if substring B is empty') do
+    expect("Cat cathedral".partial_word('cat',"","replace",)).to(eq("Please enter a replacement word!"))
   end
 end
