@@ -4,26 +4,37 @@
     <label for="sentence">Please enter the sentence you'd like to test: </label>
     <input type="text" name="sentence" class="form-control">
   </div>
-  <div class="form-group">
-    <label for="test_word">Please enter a string to test: </label>
-    <input type="text" name="test_word" class="form-control">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="test_word">Please enter a test string: </label>
+        <input type="text" name="test_word" class="form-control">
+      </div>
   </div>
-  <div class="form-group">
-    <label for="replacement_word">Please enter a string to replace it with, if applicable: </label>
-    <input type="text" name="replacement_word" class="form-control">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="replacement_word">Replace any occurances of your test string with (and select 'replace' below):</label>
+      <input type="text" name="replacement_word" class="form-control">
+    </div>
   </div>
-
-  <div class="form-group">
-    <label for="match_select">Please select the type of match: </label>
-    <select class="form-control" name="match_select">
-      <option value="whole-word">Find whole-word matches</option>
-      <option value="partial-word">Find partial-word matches</option>
-    </select>
-    <label for="transformation-select">Please select the type of match: </label>
-    <select class="form-control" name="transformation_select">
-      <option value="count">Count</option>
-      <option value="replace">Replace</option>
-    </select>
   </div>
-  <button type="submit" class="btn">Go</button>
+  <div class="row">
+    <div class="form-group" >
+      <div class="col-sm-6">
+        <label for="match_select">Please select the type of match: </label>
+        <select class="form-control" name="match_select">
+          <option value="whole-word">Find whole-word matches</option>
+          <option value="partial-word">Find partial-word matches</option>
+        </select>
+    </div>
+    <div class="col-sm-6">
+      <label for="transformation-select">Please select the type of transformation: </label>
+      <select class="form-control" name="transformation_select">
+        <option value="count">Count</option>
+        <option value="replace">Replace</option>
+      </select>
+    </div>
+  </div>
+</div>
+  <button type="submit" class="btn btn-danger">Go</button>
 </form>

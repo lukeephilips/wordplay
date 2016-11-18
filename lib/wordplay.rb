@@ -12,9 +12,9 @@ class String
   # end
 
   define_method('whole_word') do |test_word, replacement_word, transformation|
-    input_array = self.split()
+    input_array = self.downcase().gsub(/[^\w\s]/,'').split()
     if transformation == "count"
-      input_array.count(test_word)
+      input_array.count(test_word.downcase().gsub(/[^\w\s]/,''))
     elsif transformation == "replace"
       input_array.each() do |word|
         if word.downcase().gsub(/[^\w\s]/,'') == test_word.downcase().gsub(/[^\w\s]/,'')
