@@ -1,4 +1,12 @@
 class String
+  define_method('game_router') do |test,game|
+    if game == "whole"
+      self.whole_word_count(test)
+    elsif game == "partial"
+      self.partial_word_count(test)
+    end
+  end
+
   define_method('convert_input') do
     self.downcase().gsub(/[^\w\s]/,'')
   end

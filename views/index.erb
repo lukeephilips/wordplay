@@ -1,0 +1,19 @@
+<form action="/wordplay">
+  <h1>Count how many times a string appears in a word!</h1>
+  <div class="form-group">
+    <label for="sentence">Please enter the sentence you'd like to test: </label>
+    <input type="text" name="sentence" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="test_word">Please enter a string to test: </label>
+    <input type="text" name="test_word" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="game-select">Please select the type of match: </label>
+    <select class="form-control" name="game_select">
+      <option value="whole">Find whole-word matches</option>
+      <option value="partial">Find partial-word matches</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Go</button>
+</form>
